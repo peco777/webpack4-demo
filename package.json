@@ -1,21 +1,29 @@
 {
   "name": "webpack-demo",
+  "sideEffects": [
+    "*.css"
+  ],
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.0",
     "file-loader": "^6.1.1",
+    "html-webpack-plugin": "^4.5.0",
     "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.2.0",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
